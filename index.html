@@ -1,42 +1,85 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farreseller</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farrreseller</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(-45deg, #ff6600, #ff3300, #000000, #111111);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: rgba(0,0,0,0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,100,0,0.4);
+      padding: 30px;
+      max-width: 380px;
+      width: 90%;
+      text-align: center;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff6600;
+      margin-bottom: 15px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    p {
+      margin: 5px 0 20px 0;
+      opacity: 0.8;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right, #ff6600, #ff3300);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
+  <!-- Audio player autoplay + loop dengan lagu bebas copyright -->
+  <audio autoplay loop>
+    <source src="https://github.com/asdfporn/farrbeli/blob/459480ba6d79cf740239d9439c4467efae9e1da4/SSvid.net--Billie-Eilish-WILDFLOWER-Official-Lyric-Video.mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="background"></div>
-
-    <header class="header">
-        <div class="header-text-container">
-            <span class="header-text">FARRESELLER OPEN ✨ FARRESELLER OPEN ✨</span>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/100" alt="Farreseller Profile" class="profile-image">
-            <h2>Farreseller</h2>
-            <p>Servis pantas • Harga mesra • Support 2025</p>
-        </div>
-
-        <div class="link-buttons">
-            <a href="#" class="button">QR TNG</a>
-            <a href="#" class="button">LIHAT PRODUK</a>
-        </div>
-    </main>
-    
-    <audio autoplay loop hidden>
-      <source src="SSvid.net--Billie-Eilish-WILDFLOWER-Official-Lyric-Video.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
+  <div class="card">
+    <img src="https://i.imgur.com/IONyosc.jpeg" alt="Farrreseller" class="profile-img">
+    <h1>Farrreseller</h1>
+    <p>Servis pantas • Harga mesra • Support 2025</p>
+    <button class="btn" onclick="window.location.href='https://link-ke-QR-TNG.com'">QR TNG</button>
+    <button class="btn" onclick="window.location.href='https://link-ke-produk.com'">Lihat Produk</button>
+  </div>
 </body>
 </html>
-
